@@ -46,7 +46,9 @@ screenshots and visual documentation are welcome.
 - "Discover an object" random exploration
 - Responsive editorial interface, from mobile to desktop
 - Subtle, reduced-motion-aware scroll reveals
-- Original line-study artwork for every object (no external image dependencies)
+- Real object photography and historical imagery for every artifact — stored
+  locally, with provenance and licensing documented for each image
+  (see [IMAGE_SOURCES.md](./IMAGE_SOURCES.md))
 - Static rendering of every page for speed
 
 ## Tech stack
@@ -99,7 +101,8 @@ src/
     cn.ts               # Tiny className helper
   styles/               # Tailwind v4 theme (globals.css)
 public/
-  art/*.svg             # Original line-study artwork per object
+  objects/<slug>/main.jpg  # Object photography per artifact (locally stored)
+IMAGE_SOURCES.md       # Provenance + licensing for every image
 ```
 
 The architecture follows a **content/UI separation**: everything a curator
@@ -114,8 +117,10 @@ The archive is data-driven. To add a new object:
 2. Add a record matching the `ObjectItem` interface (`id`, `slug`, `name`,
    `category`, `year`, `designer`, `origin`, descriptions, `whyTimeless`,
    `anatomy`, `material`, `dimensions`, `image`, `timeline`, `sources`).
-3. Add an SVG line study at `public/art/<slug>.svg` (see the existing plates
-   for the template), or contribute a properly licensed photograph.
+3. Add a properly licensed photograph at `public/objects/<slug>/main.jpg`
+   (see [IMAGE_SOURCES.md](./IMAGE_SOURCES.md) for provenance requirements)
+   and document its source, creator, license, and license URL in the record's
+   `imageCredit` field.
 4. Register the category or materials in `src/data/categories.ts` if new.
 5. Run `npm run lint`, `npx tsc --noEmit`, and `npm run build`.
 
@@ -138,13 +143,25 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide, and
 ## Image licensing
 
 This project is an archive, so image provenance matters. Do **not** add images
-with unclear redistribution rights. Prefer public-domain images, contributor-
-created images, or images with licenses that explicitly permit redistribution.
-Every image must be documented with source, creator, license, and attribution.
-See [CONTRIBUTING.md](./CONTRIBUTING.md#image-policy) for details.
+with unclear redistribution rights. Do **not** copy images from Google Images,
+Pinterest, or websites where redistribution rights cannot be verified. Prefer:
 
-The current artwork is original line-study illustrations created for the
-project and released to the public domain.
+- Public-domain images
+- CC0 / CC BY / CC BY-SA images
+- Contributor-created photographs
+- Other clearly licensed images that permit redistribution
+
+Every image must be documented with source, creator, license, license URL, and
+attribution. See [CONTRIBUTING.md](./CONTRIBUTING.md#image-policy) for details,
+and [IMAGE_SOURCES.md](./IMAGE_SOURCES.md) for the provenance of every image
+currently in the archive.
+
+**Licensing is two-layered:**
+
+- **Source code** — MIT (see [LICENSE](./LICENSE)).
+- **Photographs** — each image retains its own license, and individual reuse
+  rights are documented per artifact in `IMAGE_SOURCES.md`. The project does
+  not claim that its images are public domain unless they actually are.
 
 ## License
 

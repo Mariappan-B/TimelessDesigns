@@ -26,7 +26,7 @@ export default function FeaturedObject({ object }: FeaturedObjectProps) {
         >
           <ArtImage
             src={object.image}
-            alt={`${object.name} — line study`}
+            alt={`${object.name} — photographed artifact`}
             className="aspect-[4/5] w-full border border-line md:aspect-[3/4]"
             eager
           />

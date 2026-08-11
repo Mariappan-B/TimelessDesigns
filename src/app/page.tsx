@@ -87,7 +87,7 @@ export default function HomePage() {
             >
               <ArtImage
                 src={featuredObject.image}
-                alt={`The ${featuredObject.name} — line study`}
+                alt={`The ${featuredObject.name} — photographed artifact`}
                 className="aspect-[4/5] border border-line md:aspect-square"
               />
             </Link>
@@ -166,16 +166,16 @@ export default function HomePage() {
       </section>
 
       {/* 05 — Editorial thought */}
-      <section className="border-t border-line bg-coal/40">
+      <section className="bg-night">
         <div className="shell py-24 md:py-36">
           <Reveal>
             <blockquote className="mx-auto max-w-3xl text-center">
-              <p className="font-serif text-3xl leading-snug text-paper md:text-5xl md:leading-[1.2]">
+              <p className="font-serif text-3xl leading-snug text-cream md:text-5xl md:leading-[1.2]">
                 “Timelessness is not the absence of change.
                 <br className="hidden md:block" />
                 It is the end of the need for it.”
               </p>
-              <footer className="eyebrow mt-10 text-dim">
+              <footer className="eyebrow mt-10 text-sand">
                 Archive note — On permanence
               </footer>
             </blockquote>

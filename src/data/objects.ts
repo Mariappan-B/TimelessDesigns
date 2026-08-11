@@ -11,6 +11,15 @@ export interface Source {
   url: string;
 }
 
+export interface ImageCredit {
+  creator: string;
+  source: string;
+  sourceUrl: string;
+  license: string;
+  licenseUrl?: string;
+  changes?: string;
+}
+
 export interface AnatomyEntry {
   title: string;
   description: string;
@@ -39,8 +48,7 @@ export interface ObjectItem {
   quoteAuthor: string;
   timeline: TimelineEntry[];
   sources: Source[];
-  imageCredit: string;
-  imageLicense: string;
+  imageCredit: ImageCredit;
   featured?: boolean;
 }
 
@@ -89,8 +97,8 @@ export const objects: ObjectItem[] = [
     material: "Plated steel wire",
     materials: ["Steel", "Brass"],
     dimensions: "≈ 38 mm × 9 mm",
-    image: "/art/safety-pin.svg",
-    gallery: ["/art/safety-pin.svg", "/art/safety-pin.svg"],
+    image: "/objects/safety-pin/main.jpg",
+    gallery: ["/objects/safety-pin/main.jpg"],
     quote:
       "The best designs are the ones you never have to think about. The safety pin is simply finished.",
     quoteAuthor: "Archive note, Object 001",
@@ -127,8 +135,13 @@ export const objects: ObjectItem[] = [
         url: "https://patents.google.com/patent/US6281A/en",
       },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Glen Bledsoe",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Safety_Pin_Closed_(30977033712).jpg",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
     featured: true,
   },
   {
@@ -170,8 +183,8 @@ export const objects: ObjectItem[] = [
     material: "Galvanized steel wire",
     materials: ["Steel"],
     dimensions: "≈ 33 mm × 8 mm",
-    image: "/art/paper-clip.svg",
-    gallery: ["/art/paper-clip.svg", "/art/paper-clip.svg"],
+    image: "/objects/paper-clip/main.jpg",
+    gallery: ["/objects/paper-clip/main.jpg"],
     quote:
       "A length of bent wire that holds paper together better than any device that followed it.",
     quoteAuthor: "Archive note, Object 002",
@@ -205,8 +218,14 @@ export const objects: ObjectItem[] = [
       { title: "Paper clip — Wikipedia", url: "https://en.wikipedia.org/wiki/Paper_clip" },
       { title: "The history of the paper clip", url: "https://www.britannica.com/story/humans-have-been-making-paper-clips-for-more-than-120-years" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "01x07x2022000",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:20220809_Paperclip.jpg",
+      license: "CC0",
+      licenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "ballpoint-pen",
@@ -252,8 +271,8 @@ export const objects: ObjectItem[] = [
     material: "Plastic body, steel or carbide ball",
     materials: ["Plastic", "Steel"],
     dimensions: "≈ 140 mm × 10 mm",
-    image: "/art/ballpoint-pen.svg",
-    gallery: ["/art/ballpoint-pen.svg", "/art/ballpoint-pen.svg"],
+    image: "/objects/ballpoint-pen/main.jpg",
+    gallery: ["/objects/ballpoint-pen/main.jpg"],
     quote:
       "Bíró's insight was not a better nib. It was abandoning the nib entirely.",
     quoteAuthor: "Archive note, Object 003",
@@ -287,8 +306,13 @@ export const objects: ObjectItem[] = [
       { title: "Ballpoint pen — Wikipedia", url: "https://en.wikipedia.org/wiki/Ballpoint_pen" },
       { title: "László Bíró — biography", url: "https://www.britannica.com/biography/Laszlo-Biro" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Ronggy",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Typical_ball_point_pen.jpg",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "spoon",
@@ -334,8 +358,8 @@ export const objects: ObjectItem[] = [
     material: "Stainless steel (historical: wood, bone, silver)",
     materials: ["Steel", "Wood", "Bone"],
     dimensions: "≈ 180 mm × 45 mm",
-    image: "/art/spoon.svg",
-    gallery: ["/art/spoon.svg", "/art/spoon.svg"],
+    image: "/objects/spoon/main.jpg",
+    gallery: ["/objects/spoon/main.jpg"],
     quote:
       "The spoon did not need a designer. It was discovered, the way fire was.",
     quoteAuthor: "Archive note, Object 004",
@@ -369,8 +393,14 @@ export const objects: ObjectItem[] = [
       { title: "Spoon — Wikipedia", url: "https://en.wikipedia.org/wiki/Spoon" },
       { title: "History of the spoon — Britannica", url: "https://www.britannica.com/topic/spoon-utensil" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Koenraet Ten Eyck",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Table_Spoon_MET_DP253992.jpg",
+      license: "CC0",
+      licenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "hammer",
@@ -416,8 +446,8 @@ export const objects: ObjectItem[] = [
     material: "Forged steel head, wooden or fiberglass handle",
     materials: ["Steel", "Wood"],
     dimensions: "≈ 330 mm × 130 mm",
-    image: "/art/hammer.svg",
-    gallery: ["/art/hammer.svg", "/art/hammer.svg"],
+    image: "/objects/hammer/main.jpg",
+    gallery: ["/objects/hammer/main.jpg"],
     quote:
       "The hammer is older than language, and it still does its job better than any replacement.",
     quoteAuthor: "Archive note, Object 005",
@@ -450,8 +480,13 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Hammer — Wikipedia", url: "https://en.wikipedia.org/wiki/Hammer" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Evan-Amos",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Claw-hammer.jpg",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "scissors",
@@ -497,8 +532,8 @@ export const objects: ObjectItem[] = [
     material: "Stainless or carbon steel",
     materials: ["Steel"],
     dimensions: "≈ 180 mm × 70 mm",
-    image: "/art/scissors.svg",
-    gallery: ["/art/scissors.svg", "/art/scissors.svg"],
+    image: "/objects/scissors/main.jpg",
+    gallery: ["/objects/scissors/main.jpg"],
     quote:
       "Two blades, one pivot, one gesture. Nothing about it is accidental.",
     quoteAuthor: "Archive note, Object 006",
@@ -532,8 +567,13 @@ export const objects: ObjectItem[] = [
       { title: "Scissors — Wikipedia", url: "https://en.wikipedia.org/wiki/Scissors" },
       { title: "Scissors — Britannica", url: "https://www.britannica.com/technology/scissors" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Evan-amos",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Fiskars-scissors.jpg",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "padlock",
@@ -579,8 +619,8 @@ export const objects: ObjectItem[] = [
     material: "Hardened steel, brass, bronze",
     materials: ["Steel", "Brass"],
     dimensions: "≈ 60 mm × 50 mm",
-    image: "/art/padlock.svg",
-    gallery: ["/art/padlock.svg", "/art/padlock.svg"],
+    image: "/objects/padlock/main.jpg",
+    gallery: ["/objects/padlock/main.jpg"],
     quote:
       "A lock is not a machine to stop force. It is a message about where force is not welcome.",
     quoteAuthor: "Archive note, Object 007",
@@ -614,8 +654,14 @@ export const objects: ObjectItem[] = [
       { title: "Padlock — Wikipedia", url: "https://en.wikipedia.org/wiki/Padlock" },
       { title: "Locks — Britannica", url: "https://www.britannica.com/technology/lock-security-device" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Jonatan Svensson Glad",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Padlock_infront_of_isolated_white_background_01.jpg",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "stapler",
@@ -661,8 +707,8 @@ export const objects: ObjectItem[] = [
     material: "Steel, plastic base",
     materials: ["Steel", "Plastic"],
     dimensions: "≈ 180 mm × 60 mm",
-    image: "/art/stapler.svg",
-    gallery: ["/art/stapler.svg", "/art/stapler.svg"],
+    image: "/objects/stapler/main.jpg",
+    gallery: ["/objects/stapler/main.jpg"],
     quote:
       "The stapler removed the only difficult part of binding paper: the thought.",
     quoteAuthor: "Archive note, Object 008",
@@ -695,8 +741,14 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Stapler — Wikipedia", url: "https://en.wikipedia.org/wiki/Stapler" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "DifrancoBarnes",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Staplerblack.jpg",
+      license: "CC0",
+      licenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "toothbrush",
@@ -742,8 +794,8 @@ export const objects: ObjectItem[] = [
     material: "Nylon bristles, plastic handle",
     materials: ["Plastic", "Bone"],
     dimensions: "≈ 190 mm × 25 mm",
-    image: "/art/toothbrush.svg",
-    gallery: ["/art/toothbrush.svg", "/art/toothbrush.svg"],
+    image: "/objects/toothbrush/main.jpg",
+    gallery: ["/objects/toothbrush/main.jpg"],
     quote:
       "Five hundred years of daily use, and the only essential change was trading hog bristle for nylon.",
     quoteAuthor: "Archive note, Object 009",
@@ -776,8 +828,13 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Toothbrush — Wikipedia", url: "https://en.wikipedia.org/wiki/Toothbrush" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Jonas Bergsten",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Toothbrush_20050716_004.jpg",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "notebook",
@@ -823,8 +880,8 @@ export const objects: ObjectItem[] = [
     material: "Paper, board, cloth or leather",
     materials: ["Paper", "Wood"],
     dimensions: "≈ 210 mm × 148 mm",
-    image: "/art/notebook.svg",
-    gallery: ["/art/notebook.svg", "/art/notebook.svg"],
+    image: "/objects/notebook/main.jpg",
+    gallery: ["/objects/notebook/main.jpg"],
     quote:
       "The notebook is the first memory prosthesis, and it has never been improved upon.",
     quoteAuthor: "Archive note, Object 010",
@@ -858,8 +915,13 @@ export const objects: ObjectItem[] = [
       { title: "Notebook — Wikipedia", url: "https://en.wikipedia.org/wiki/Notebook" },
       { title: "Codex — Wikipedia", url: "https://en.wikipedia.org/wiki/Codex" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Homonihilis",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Written_in_moleskine.JPG",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "ruler",
@@ -905,8 +967,8 @@ export const objects: ObjectItem[] = [
     material: "Wood, steel, or rigid plastic",
     materials: ["Wood", "Steel", "Plastic"],
     dimensions: "≈ 300 mm × 40 mm",
-    image: "/art/ruler.svg",
-    gallery: ["/art/ruler.svg", "/art/ruler.svg"],
+    image: "/objects/ruler/main.jpg",
+    gallery: ["/objects/ruler/main.jpg"],
     quote:
       "Every surveyor's station, every machine shop, every school desk still begins with a straight line.",
     quoteAuthor: "Archive note, Object 011",
@@ -940,8 +1002,14 @@ export const objects: ObjectItem[] = [
       { title: "Ruler — Wikipedia", url: "https://en.wikipedia.org/wiki/Ruler" },
       { title: "Indus Valley civilization — Britannica", url: "https://www.britannica.com/topic/Indus-civilization" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Rama",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Measuring_ruler-N_1538-IMG_4492-white.jpg",
+      license: "CC BY-SA 3.0 fr",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "ladder",
@@ -987,8 +1055,8 @@ export const objects: ObjectItem[] = [
     material: "Wood, aluminium, or fibreglass",
     materials: ["Wood", "Steel", "Composite"],
     dimensions: "≈ 3000 mm × 500 mm",
-    image: "/art/ladder.svg",
-    gallery: ["/art/ladder.svg", "/art/ladder.svg"],
+    image: "/objects/ladder/main.jpg",
+    gallery: ["/objects/ladder/main.jpg"],
     quote:
       "Ten thousand years of climbing, and the drawing at Cogul could be hanging in a hardware store.",
     quoteAuthor: "Archive note, Object 012",
@@ -1022,8 +1090,14 @@ export const objects: ObjectItem[] = [
       { title: "Ladder — Wikipedia", url: "https://en.wikipedia.org/wiki/Ladder" },
       { title: "Cogul rock art — Wikipedia", url: "https://en.wikipedia.org/wiki/La_Cogul" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Santeri Viinamäki",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Wooden_red_step_ladder.jpg",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "bicycle-bell",
@@ -1069,8 +1143,8 @@ export const objects: ObjectItem[] = [
     material: "Brass or steel dome, steel spring",
     materials: ["Brass", "Steel"],
     dimensions: "≈ 45 mm diameter",
-    image: "/art/bicycle-bell.svg",
-    gallery: ["/art/bicycle-bell.svg", "/art/bicycle-bell.svg"],
+    image: "/objects/bicycle-bell/main.jpg",
+    gallery: ["/objects/bicycle-bell/main.jpg"],
     quote:
       "The bicycle bell solved a problem that no sensor, light, or horn has solved better: how to ask, not demand.",
     quoteAuthor: "Archive note, Object 013",
@@ -1103,8 +1177,14 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Bicycle bell — Wikipedia", url: "https://en.wikipedia.org/wiki/Bicycle_bell" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Singlespeedfahrer",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Bicycle_bell_by_Rose_Bikes.jpg",
+      license: "CC0",
+      licenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "clothes-hanger",
@@ -1150,8 +1230,8 @@ export const objects: ObjectItem[] = [
     material: "Steel wire, plastic coating optional",
     materials: ["Steel", "Wood", "Plastic"],
     dimensions: "≈ 420 mm × 200 mm",
-    image: "/art/clothes-hanger.svg",
-    gallery: ["/art/clothes-hanger.svg", "/art/clothes-hanger.svg"],
+    image: "/objects/clothes-hanger/main.jpg",
+    gallery: ["/objects/clothes-hanger/main.jpg"],
     quote:
       "Three lines of wire hold the entire weight of a wardrobe, invisible and indestructible.",
     quoteAuthor: "Archive note, Object 014",
@@ -1184,8 +1264,14 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Clothes hanger — Wikipedia", url: "https://en.wikipedia.org/wiki/Clothes_hanger" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Stilfehler",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Wire_clothes_hanger.png",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "tape-measure",
@@ -1231,8 +1317,8 @@ export const objects: ObjectItem[] = [
     material: "Steel tape, plastic or steel case",
     materials: ["Steel", "Plastic"],
     dimensions: "≈ 70 mm × 70 mm case",
-    image: "/art/tape-measure.svg",
-    gallery: ["/art/tape-measure.svg", "/art/tape-measure.svg"],
+    image: "/objects/tape-measure/main.jpg",
+    gallery: ["/objects/tape-measure/main.jpg"],
     quote:
       "A measuring instrument small enough to lose and accurate enough to build with.",
     quoteAuthor: "Archive note, Object 015",
@@ -1265,8 +1351,14 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Tape measure — Wikipedia", url: "https://en.wikipedia.org/wiki/Tape_measure" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Junkyardsparkle",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Lufkin_Universal_50_ft_tape_measure.jpg",
+      license: "CC0",
+      licenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "door-handle",
@@ -1312,8 +1404,8 @@ export const objects: ObjectItem[] = [
     material: "Brass, steel, or die-cast alloy",
     materials: ["Brass", "Steel"],
     dimensions: "≈ 150 mm lever",
-    image: "/art/door-handle.svg",
-    gallery: ["/art/door-handle.svg", "/art/door-handle.svg"],
+    image: "/objects/door-handle/main.jpg",
+    gallery: ["/objects/door-handle/main.jpg"],
     quote:
       "Every hand in the world already knows how to use a door handle. That knowledge is the design.",
     quoteAuthor: "Archive note, Object 016",
@@ -1347,8 +1439,14 @@ export const objects: ObjectItem[] = [
       { title: "Door handle — Wikipedia", url: "https://en.wikipedia.org/wiki/Door_handle" },
       { title: "Door furniture — Britannica", url: "https://www.britannica.com/technology/door" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Philip Johnson",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Philip_Johnson,_Door_Handle_with_Thumb_Press,_c._1937,_NGA_23518.jpg",
+      license: "CC0",
+      licenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "matchbox",
@@ -1394,8 +1492,8 @@ export const objects: ObjectItem[] = [
     material: "Wood or cardboard splint, chemical head, paper box",
     materials: ["Paper", "Wood"],
     dimensions: "≈ 55 mm × 35 mm × 15 mm",
-    image: "/art/matchbox.svg",
-    gallery: ["/art/matchbox.svg", "/art/matchbox.svg"],
+    image: "/objects/matchbox/main.jpg",
+    gallery: ["/objects/matchbox/main.jpg"],
     quote:
       "Humans spent most of their history relighting fire by labor. The matchbox put a complete hearth in a pocket.",
     quoteAuthor: "Archive note, Object 017",
@@ -1429,8 +1527,13 @@ export const objects: ObjectItem[] = [
       { title: "Match — Wikipedia", url: "https://en.wikipedia.org/wiki/Match" },
       { title: "Matchbox — Wikipedia", url: "https://en.wikipedia.org/wiki/Matchbox" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Korall",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Wedding_or_engagement_Matchbox.JPG",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "pencil",
@@ -1476,8 +1579,8 @@ export const objects: ObjectItem[] = [
     material: "Cedar casing, graphite and clay core",
     materials: ["Wood", "Composite"],
     dimensions: "≈ 175 mm × 8 mm",
-    image: "/art/pencil.svg",
-    gallery: ["/art/pencil.svg", "/art/pencil.svg"],
+    image: "/objects/pencil/main.jpg",
+    gallery: ["/objects/pencil/main.jpg"],
     quote:
       "No other tool is so tolerant of a shaking hand, a wet glove, or a thought worth crossing out.",
     quoteAuthor: "Archive note, Object 018",
@@ -1510,8 +1613,14 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Pencil — Wikipedia", url: "https://en.wikipedia.org/wiki/Pencil" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "999real",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Yellow_Faber_Castell_2B_pencil_side_no_logo.jpg",
+      license: "CC0",
+      licenseUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "comb",
@@ -1557,8 +1666,8 @@ export const objects: ObjectItem[] = [
     material: "Plastic (historical: bone, ivory, wood)",
     materials: ["Plastic", "Bone", "Wood"],
     dimensions: "≈ 150 mm × 35 mm",
-    image: "/art/comb.svg",
-    gallery: ["/art/comb.svg", "/art/comb.svg"],
+    image: "/objects/comb/main.jpg",
+    gallery: ["/objects/comb/main.jpg"],
     quote:
       "A strip of teeth, unchanged in seven thousand years, still the first tool touched each morning.",
     quoteAuthor: "Archive note, Object 019",
@@ -1591,8 +1700,14 @@ export const objects: ObjectItem[] = [
     sources: [
       { title: "Comb — Wikipedia", url: "https://en.wikipedia.org/wiki/Comb" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Crisco 1492",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Plastic_comb,_2015-06-07.jpg",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
   {
     id: "bottle-opener",
@@ -1638,8 +1753,8 @@ export const objects: ObjectItem[] = [
     material: "Steel, often zinc-plated",
     materials: ["Steel"],
     dimensions: "≈ 100 mm × 30 mm",
-    image: "/art/bottle-opener.svg",
-    gallery: ["/art/bottle-opener.svg", "/art/bottle-opener.svg"],
+    image: "/objects/bottle-opener/main.jpg",
+    gallery: ["/objects/bottle-opener/main.jpg"],
     quote:
       "Every cap ever popped is a small argument for how little design needs to change.",
     quoteAuthor: "Archive note, Object 020",
@@ -1673,8 +1788,13 @@ export const objects: ObjectItem[] = [
       { title: "Bottle opener — Wikipedia", url: "https://en.wikipedia.org/wiki/Bottle_opener" },
       { title: "Crown cork — Wikipedia", url: "https://en.wikipedia.org/wiki/Crown_cork" },
     ],
-    imageCredit: "Timeless Design — original line study",
-    imageLicense: "Public domain (project-generated artwork)",
+    imageCredit: {
+      creator: "Lemp Brewing Company",
+      source: "Wikimedia Commons",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Cerva_Bottle_Opener.jpg",
+      license: "Public domain",
+      changes: "Downloaded and resized for local display (max 1920 px)",
+    },
   },
 ];
 

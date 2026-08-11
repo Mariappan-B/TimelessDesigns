@@ -26,7 +26,7 @@ export default function ObjectCard({
       >
         <ArtImage
           src={object.image}
-          alt={`${object.name} — line study of the object`}
+          alt={`${object.name} — photographed artifact`}
           className={cn("w-full border border-line", aspect)}
           eager={eager}
         />

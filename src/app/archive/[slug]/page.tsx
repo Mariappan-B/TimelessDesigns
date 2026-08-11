@@ -102,11 +102,27 @@ export default async function ObjectPage({ params }: ObjectPageProps) {
         <Reveal variant="clip">
           <ArtImage
             src={object.image}
-            alt={`The ${object.name} — line study, full view`}
+            alt={`The ${object.name} — photographed artifact, full view`}
             className="aspect-[16/10] w-full md:aspect-[21/9]"
+            imgClassName="p-4 sm:p-8 md:p-14"
             eager
           />
         </Reveal>
+      </div>
+
+      <div className="shell">
+        <p className="py-3 text-right text-xs tracking-wide text-dim">
+          <a
+            href={object.imageCredit.sourceUrl}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="link-underline"
+          >
+            {object.imageCredit.creator}
+          </a>
+          {" · "}
+          {object.imageCredit.source} · {object.imageCredit.license} ↗
+        </p>
       </div>
 
       <section className="shell py-20 md:py-28">
@@ -174,14 +190,14 @@ export default async function ObjectPage({ params }: ObjectPageProps) {
         </div>
       </section>
 
-      <section className="border-t border-line">
+      <section className="bg-night">
         <div className="shell py-24 md:py-36">
           <Reveal>
             <blockquote className="mx-auto max-w-3xl text-center">
-              <p className="font-serif text-3xl leading-snug text-paper md:text-4xl">
+              <p className="font-serif text-3xl leading-snug text-cream md:text-4xl">
                 “{object.quote}”
               </p>
-              <footer className="eyebrow mt-8 text-dim">
+              <footer className="eyebrow mt-8 text-sand">
                 {object.quoteAuthor}
               </footer>
             </blockquote>
@@ -211,7 +227,17 @@ export default async function ObjectPage({ params }: ObjectPageProps) {
                 ))}
               </ul>
               <p className="mt-10 border-t border-line pt-6 text-xs leading-relaxed text-dim">
-                Image — {object.imageCredit}. License — {object.imageLicense}.
+                Image — {object.imageCredit.creator} · {object.imageCredit.source}
+                {" · "}
+                <a
+                  href={object.imageCredit.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="link-underline text-dim"
+                >
+                  {object.imageCredit.license} ↗
+                </a>
+                {object.imageCredit.changes ? ` · ${object.imageCredit.changes}` : ""}
               </p>
             </Reveal>
           </div>

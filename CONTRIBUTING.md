@@ -117,11 +117,12 @@ Key fields:
 | `material`       | Display material string                        |
 | `materials`      | Filter tags (must exist in `materials` list)   |
 | `dimensions`     | Approximate dimensions                         |
-| `image`          | Path to the artwork, e.g. `/art/safety-pin.svg`|
+| `image`          | Path to the photograph, e.g. `/objects/safety-pin/main.jpg` |
 | `gallery`        | Image paths for the gallery                    |
 | `quote`          | An editorial quote                             |
 | `timeline`       | Year → title → description entries             |
 | `sources`        | Credible, linked references                    |
+| `imageCredit`    | Structured provenance: creator, source, source URL, license, license URL, changes |
 
 ## Historical accuracy
 
@@ -135,23 +136,33 @@ Key fields:
 
 Images are the most sensitive part of an archive. Follow these rules:
 
-1. **Do not add images with unclear redistribution rights.** No screenshots of
-   stock sites, no random web images, no images without a documented license.
-2. Prefer images that are:
+1. **Do not add images with unclear redistribution rights.** No images copied
+   from Google Images, Pinterest, blogs, commercial or stock sites, museum
+   sites, or anywhere redistribution cannot be verified. Wikimedia Commons is
+   the preferred source because it publishes explicit licensing metadata.
+2. Acceptable licenses are:
    - public domain;
-   - licensed under a permissive license that permits redistribution; or
-   - created by a contributor (you) for the project.
+   - CC0;
+   - CC BY / CC BY-SA and other Creative Commons licenses that permit
+     redistribution and allow attribution to be provided;
+   - contributor-created photographs released under a permissive license.
 3. Every image must be documented with:
    - source;
    - creator when known;
-   - license; and
+   - license and license URL;
+   - the original source file page URL; and
    - any attribution requirements.
-4. Document images in the object record using `imageCredit` and
-   `imageLicense` fields.
+4. Store images locally under `public/objects/<slug>/` and document provenance
+   in the object record using the structured `imageCredit` field
+   (`creator`, `source`, `sourceUrl`, `license`, `licenseUrl`, `changes`).
+5. Keep the archive's own licensing honest: **source code is MIT; each
+   photograph keeps its own license.** Do not claim an image is public domain
+   unless it actually is.
+6. When in doubt, do not add the image. An archive with 19 documented images is
+   stronger than one with 20 undocumented ones.
 
-The current line-study artwork (`public/art/*.svg`) was created for the
-project and is released to the public domain. New artwork contributed to the
-project is treated the same way.
+The provenance of every image currently in the archive is documented in
+[`IMAGE_SOURCES.md`](./IMAGE_SOURCES.md); keep it in sync when adding images.
 
 ## Code style
 

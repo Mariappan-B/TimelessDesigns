@@ -8,7 +8,7 @@ interface ArtImageProps {
   alt: string;
   className?: string;
   imgClassName?: string;
-  crop?: "none" | "detail";
+  fit?: "contain" | "cover";
   eager?: boolean;
   fallback?: string;
 }
@@ -18,7 +18,7 @@ export default function ArtImage({
   alt,
   className,
   imgClassName,
-  crop = "none",
+  fit = "contain",
   eager = false,
   fallback = "Fig.",
 }: ArtImageProps) {
@@ -37,7 +37,7 @@ export default function ArtImage({
         </span>
       ) : (
         <span className="block h-full w-full transition-transform duration-700 ease-out motion-reduce:transition-none motion-reduce:group-hover:scale-100 group-hover:scale-[1.04]">
-          {/* eslint-disable-next-line @next/next/no-img-element -- vector line-art, not raster; next/image would not optimize it */}
+          {/* eslint-disable-next-line @next/next/no-img-element -- locally stored photography rendered with object-fit; next/image is not required for these static images */}
           <img
             src={src}
             alt={alt}
@@ -47,8 +47,8 @@ export default function ArtImage({
             decoding="async"
             onError={() => setFailed(true)}
             className={cn(
-              "h-full w-full object-cover",
-              crop === "detail" && "scale-[1.7]",
+              "h-full w-full",
+              fit === "contain" ? "object-contain" : "object-cover",
               imgClassName,
             )}
           />
