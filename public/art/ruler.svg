@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#191713"/>
+      <stop offset="1" stop-color="#0d0c0a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.36" r="0.62">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.055"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <ellipse cx="600" cy="492" rx="300" ry="32" fill="url(#shadow)"/>
+  <g fill="none" stroke="#e8e5df" stroke-opacity="0.78" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="280" y="370" width="640" height="80" rx="8"/>
+    <circle cx="340" cy="410" r="9"/>
+    <circle cx="820" cy="410" r="9"/>
+  </g>
+  <g fill="none" stroke="#e8e5df" stroke-opacity="0.62" stroke-width="4" stroke-linecap="round">
+    <path d="M320,430 L320,444 M340,430 L340,444 M360,430 L360,444 M380,430 L380,444 M400,430 L400,444 M420,430 L420,444 M440,430 L440,444 M460,430 L460,444 M480,430 L480,444 M500,430 L500,444 M520,430 L520,444 M540,430 L540,444 M560,430 L560,444 M580,430 L580,444 M600,430 L600,444 M620,430 L620,444 M640,430 L640,444 M660,430 L660,444 M680,430 L680,444 M700,430 L700,444 M720,430 L720,444 M740,430 L740,444 M760,430 L760,444 M780,430 L780,444 M800,430 L800,444 M820,430 L820,444"/>
+    <path d="M320,430 L320,452 M420,430 L420,452 M520,430 L520,452 M620,430 L620,452 M720,430 L720,452 M820,430 L820,452"/>
+  </g>
+</svg>

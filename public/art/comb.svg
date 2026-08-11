@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#191713"/>
+      <stop offset="1" stop-color="#0d0c0a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.36" r="0.62">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.055"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <ellipse cx="600" cy="580" rx="300" ry="34" fill="url(#shadow)"/>
+  <g fill="none" stroke="#e8e5df" stroke-opacity="0.78" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="280" y="380" width="460" height="36" rx="12"/>
+    <line x1="300" y1="416" x2="300" y2="548"/>
+    <line x1="720" y1="416" x2="720" y2="548"/>
+  </g>
+  <g fill="none" stroke="#e8e5df" stroke-opacity="0.62" stroke-width="4" stroke-linecap="round">
+    <path d="M330,416 L330,540 M350,416 L350,540 M370,416 L370,540 M390,416 L390,540 M410,416 L410,540 M430,416 L430,540 M450,416 L450,540 M470,416 L470,540 M490,416 L490,540 M510,416 L510,540 M530,416 L530,540 M550,416 L550,540 M570,416 L570,540 M590,416 L590,540 M610,416 L610,540 M630,416 L630,540 M650,416 L650,540 M670,416 L670,540 M690,416 L690,540"/>
+  </g>
+  <g fill="none" stroke="#a88f68" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round">
+    <line x1="320" y1="402" x2="680" y2="402"/>
+  </g>
+</svg>
