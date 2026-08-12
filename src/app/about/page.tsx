@@ -72,7 +72,7 @@ const chapters = [
     index: "08",
     title: "Why some designs survive.",
     body: [
-      "The pattern across all twenty objects is the same. The problem was completely understood. The answer was reduced to its minimum. The form explained itself. The object worked without instructions, failed without drama, and was repaired without specialists.",
+      "The pattern across all one hundred and five objects is the same. The problem was completely understood. The answer was reduced to its minimum. The form explained itself. The object worked without instructions, failed without drama, and was repaired without specialists.",
       "We call these designs timeless not because time stood still, but because time passed and found nothing worth changing.",
     ],
   },

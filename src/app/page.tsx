@@ -63,7 +63,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-stone">
             Some things became so right that time had very little to improve.
-            Twenty of them, collected here as design artifacts.
+            Over one hundred of them, collected here as design artifacts.
           </p>
         </Reveal>
         <Reveal delay={180}>
@@ -228,7 +228,7 @@ export default function HomePage() {
         <div className="shell flex flex-col items-start gap-10 py-24 md:flex-row md:items-center md:justify-between md:py-36">
           <Reveal>
             <h2 className="max-w-xl font-serif text-4xl leading-tight text-paper md:text-6xl">
-              Twenty objects.
+              One hundred and five objects.
               <br />
               None of them changed.
             </h2>

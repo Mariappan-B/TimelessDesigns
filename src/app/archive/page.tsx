@@ -6,7 +6,7 @@ import PageIntro from "@/components/PageIntro";
 export const metadata: Metadata = {
   title: "The Archive",
   description:
-    "Twenty objects whose original ideas outlived generations of redesign. Browse, search, and filter the Timeless archive.",
+    "Over one hundred objects whose original ideas outlived generations of redesign. Browse, search, and filter the Timeless archive.",
 };
 
 export default function ArchivePage() {
@@ -15,7 +15,7 @@ export default function ArchivePage() {
       <PageIntro
         eyebrow="The Archive"
         title="Objects whose original ideas outlived generations of redesign."
-        lede="Twenty everyday things, collected as design artifacts. Each one survived its own era, its materials, and every attempt to replace it."
+        lede="Over one hundred everyday things, collected as design artifacts. Each one survived its own era, its materials, and every attempt to replace it."
       />
       <section className="shell pb-28 md:pb-40">
         <ArchiveExplorer objects={objects} />

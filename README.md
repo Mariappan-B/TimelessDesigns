@@ -14,8 +14,8 @@ journal, an archive. Not a SaaS landing page.
 
 Throughout history, some objects achieved such a successful balance between
 function, form, simplicity, and usability that their basic design has barely
-changed. The safety pin. The paper clip. The spoon. The hammer. Twenty of
-them are collected here, explored as artifacts rather than products.
+changed. The safety pin. The paper clip. The spoon. The hammer. More than one
+hundred of them are collected here, explored as artifacts rather than products.
 
 The site explains *why* these objects became timeless:
 
@@ -38,7 +38,7 @@ screenshots and visual documentation are welcome.
 
 ## Features
 
-- A curated archive of 20 objects with editorial content
+- A curated archive of 105 objects with editorial content
 - Object detail pages with design anatomy, timelines, and sources
 - Museum-style catalog metadata for every object
 - Client-side search across name, designer, year, material, and category

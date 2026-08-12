@@ -158,8 +158,8 @@ Images are the most sensitive part of an archive. Follow these rules:
 5. Keep the archive's own licensing honest: **source code is MIT; each
    photograph keeps its own license.** Do not claim an image is public domain
    unless it actually is.
-6. When in doubt, do not add the image. An archive with 19 documented images is
-   stronger than one with 20 undocumented ones.
+6. When in doubt, do not add the image. An archive with well-documented images is
+   stronger than one with poorly documented ones.
 
 The provenance of every image currently in the archive is documented in
 [`IMAGE_SOURCES.md`](./IMAGE_SOURCES.md); keep it in sync when adding images.
